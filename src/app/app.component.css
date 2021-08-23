@@ -1,0 +1,13 @@
+h1 {
+  background-color: #ccc;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px 10px;
+  margin: 20px auto;
+  border-radius: 4px;
+  color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
