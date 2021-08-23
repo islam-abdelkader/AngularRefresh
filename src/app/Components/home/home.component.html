@@ -1,1 +1,16 @@
-<h1>hello from home</h1>
+<h1>Company Name: {{ myComp.name }}</h1>
+<img src="{{ myComp.image }}" alt="dum-image" />
+<!-- <img [src]="myComp.image" alt="dum-image" /> -->
+<br /><input
+  type="button"
+  class="btn btn-success"
+  (click)="ToggleServices()"
+  value="{{ btnText }}"
+/>
+<!-- <div [hidden]="!isSevicesDisplay"> -->
+<div *ngIf="isSevicesDisplay">
+  Services:
+  <ul>
+    <li *ngFor="let item of myComp.services">{{ item }}</li>
+  </ul>
+</div>
