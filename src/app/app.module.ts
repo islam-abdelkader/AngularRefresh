@@ -8,6 +8,7 @@ import { FooterComponent } from './Components/Layout/footer/footer.component';
 import { ContentComponent } from './Components/Layout/content/content.component';
 import { HomeComponent } from './Components/home/home.component';
 import { SidebarComponent } from './Components/Layout/sidebar/sidebar.component';
+import { HighlightDirective } from './_directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SidebarComponent } from './Components/Layout/sidebar/sidebar.component'
     FooterComponent,
     ContentComponent,
     HomeComponent,
-    SidebarComponent
+    SidebarComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

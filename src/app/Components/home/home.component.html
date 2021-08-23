@@ -14,3 +14,38 @@
     <li *ngFor="let item of myComp.services">{{ item }}</li>
   </ul>
 </div>
+<table class="table">
+  <thead>
+    <tr class="bg-dark text-secondary">
+      <th>##</th>
+      <th appHighlight>ID</th>
+      <th>Name</th>
+      <th>Quantity</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let product of products; let i = index"
+      [ngStyle]="{ background: i % 2 == 0 ? '#ddd' : '#fff' }"
+    >
+      <td>{{ i + 1 }}</td>
+      <td>{{ product.ID }}</td>
+      <td>{{ product.Name }}</td>
+      <!-- <td *ngIf="product.Quantity > 1">{{ product.Quantity }}</td>
+      <td *ngIf="product.Quantity == 0">Out of Stock</td> -->
+      <td
+        [ngSwitch]="product.Quantity"
+        [ngClass]="{
+          'text-danger': product.Quantity == 0,
+          'text-warning': product.Quantity == 1
+        }"
+      >
+        <div *ngSwitchCase="0">Out of Stock</div>
+        <div *ngSwitchCase="1">Last Item</div>
+        <div *ngSwitchDefault>{{ product.Quantity }}</div>
+      </td>
+      <td>{{ product.Price }}</td>
+    </tr>
+  </tbody>
+</table>
