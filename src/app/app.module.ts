@@ -9,6 +9,7 @@ import { ContentComponent } from './Components/Layout/content/content.component'
 import { HomeComponent } from './Components/home/home.component';
 import { SidebarComponent } from './Components/Layout/sidebar/sidebar.component';
 import { HighlightDirective } from './_directives/highlight.directive';
+import { UsdtoegpPipe } from './_pipes/usdtoegp.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HighlightDirective } from './_directives/highlight.directive';
     ContentComponent,
     HomeComponent,
     SidebarComponent,
-    HighlightDirective
+    HighlightDirective,
+    UsdtoegpPipe
   ],
   imports: [
     BrowserModule,

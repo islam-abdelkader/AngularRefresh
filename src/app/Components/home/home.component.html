@@ -14,6 +14,11 @@
     <li *ngFor="let item of myComp.services">{{ item }}</li>
   </ul>
 </div>
+<!--
+<h4>Currency in $: {{ 100000 | currency: "USD":false }}</h4>
+<h4>Currency in Euro: {{ 100000 | currency: "EUR":true }}</h4>
+<h4>Currency * defualt: {{ 100000 | usdtoegp }}</h4>
+<h4>Currency * specific: {{ 100000 | usdtoegp: 18 }}</h4> -->
 <table class="table">
   <thead>
     <tr class="bg-dark text-secondary">
