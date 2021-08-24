@@ -10,6 +10,9 @@ import { HomeComponent } from './Components/home/home.component';
 import { SidebarComponent } from './Components/Layout/sidebar/sidebar.component';
 import { HighlightDirective } from './_directives/highlight.directive';
 import { UsdtoegpPipe } from './_pipes/usdtoegp.pipe';
+import { MasterOrderComponent } from './Components/Orders/master-order/master-order.component';
+import { OrderDetailsComponent } from './Components/Orders/order-details/order-details.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { UsdtoegpPipe } from './_pipes/usdtoegp.pipe';
     HomeComponent,
     SidebarComponent,
     HighlightDirective,
-    UsdtoegpPipe
+    UsdtoegpPipe,
+    MasterOrderComponent,
+    OrderDetailsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

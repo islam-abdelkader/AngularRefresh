@@ -1,0 +1,14 @@
+<div class="cat">
+  Category:
+  <select [(ngModel)]="catId">
+    <option *ngFor="let cat of cats" value="{{ cat.ID }}">
+      {{ cat.Name }}
+    </option>
+  </select>
+</div>
+<app-order-details
+  [selCatId]="catId"
+  (child)="Parent($event)"
+></app-order-details>
+<label for="" class="form-label">Total Price:</label>
+<label for="" class="form-label">{{ Total }}</label>

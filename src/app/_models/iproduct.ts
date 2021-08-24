@@ -3,4 +3,5 @@ export interface IProduct {
   Name: string;
   Quantity: number;
   Price: number;
+  CategoryID?: number;
 }

@@ -1,0 +1,32 @@
+<table
+  class="
+    table table-striped|sm|bordered|hover|inverse table-inverse table-responsive
+  "
+>
+  <thead class="thead-inverse|thead-default">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Available Quentity</th>
+      <th>Wanted Quentity</th>
+      <th>Cart</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prd of getPoductByCatId()">
+      <td>{{ prd.ID }}</td>
+      <td>{{ prd.Name }}</td>
+      <td>{{ prd.Price }}</td>
+      <td>{{ prd.Quantity }}</td>
+      <td><input #pCount type="number" /></td>
+      <td>
+        <input
+          type="button"
+          value="Add"
+          (click)="add(prd.Price, pCount.value)"
+        />
+      </td>
+    </tr>
+  </tbody>
+</table>
